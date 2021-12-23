@@ -14,15 +14,15 @@ PARAM = "PARAM"
 ANGLE_RANGE = 360
 
 # particle constants
-# NUM_PARTICLES = 1000
-NUM_PARTICLES = 200
+NUM_PARTICLES = 1000
+# NUM_PARTICLES = 200
 THRES = NUM_PARTICLES / 10
 MAX_RANGE = 80
 
 # world constants
 EXTEND_AREA = 0
-# GRID_SIZE = 0.2
-GRID_SIZE = 0.5
+GRID_SIZE = 0.2
+# GRID_SIZE = 0.5
 RISE = 0
 
 # noise constants
@@ -398,7 +398,7 @@ def main():
     dt_sum = 0
     while m_idx < len(odom_data) and l_idx < len(lidar_ts):
         # printing and matplotlib display
-        if m_idx % 400 == 0:
+        if m_idx % 200 == 0:
             plt.figure(2)
             plt.title("Tv: " + str(R[0,0]) + " Rv: " + str(R[1,1]))
             plt.imshow(grid_map)
